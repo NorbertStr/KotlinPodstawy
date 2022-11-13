@@ -77,4 +77,20 @@ fun main(args: Array<String>) {
     println(newPerson.age)
     println(newPerson.surname)
 
+    /*
+            RUN
+     */
+
+//    "run" odpowiada za inicjalizację, konfigurację oraz obliczenie rezultatu.
+
+    val startEngine = run {
+        println("Engine starting...")
+        println("....")
+        println("...")
+        400
+    }
+    println(startEngine)
+// Po uruchomieniu programu zostaną wypisane wszystkie println i ostatnia wartość, czyli 400 zostanie zwrócona.
+// Run zachowuje się podobnie jak let z tą różnicą, że nie możemy użyć let samego, czyli np startEngine = let{}.
+// Let musi być wykonane na jakimś obiekcie.
 }
