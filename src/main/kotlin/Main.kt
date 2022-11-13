@@ -93,4 +93,29 @@ fun main(args: Array<String>) {
 // Po uruchomieniu programu zostaną wypisane wszystkie println i ostatnia wartość, czyli 400 zostanie zwrócona.
 // Run zachowuje się podobnie jak let z tą różnicą, że nie możemy użyć let samego, czyli np startEngine = let{}.
 // Let musi być wykonane na jakimś obiekcie.
+
+    /*
+            With
+     */
+
+//Służy do grupowania operacji.
+    with(newPerson){
+        age = 20
+        name = "Stefan"
+        surname = "Kowalski"
+        incAge()
+        addConstToSurname()
+    }
+// Co ważne with zwraca wartość.
+    val result = with(newPerson){
+        age = 20
+        name = "Stefan"
+        surname = "Kowalski"
+        incAge()
+        addConstToSurname()
+        "zwrucona wartość result"
+    }
+ println(result)
+
 }
+
