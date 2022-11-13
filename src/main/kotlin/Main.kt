@@ -3,7 +3,20 @@ class Person{
     var name = ""
     var surname = ""
     var age = 0
+
+//    metoda zwiększająca wiek
+    fun incAge(){
+        age++
+    }
+
+//    metoda dodająca przyrostek "son" do surname
+    fun addConstToSurname(){
+        surname += "son"
+    }
+
 }
+
+
 
 fun main(args: Array<String>) {
 
@@ -47,4 +60,21 @@ fun main(args: Array<String>) {
         println("Wartość równa się: $nieNull")
 //    Jeśli wartość byłaby nullem to instrukcja nie wykonałaby się.
     }
+
+    /*
+            ALSO:
+     */
+
+    val newPerson = Person().apply {
+        name = "Jan"
+        surname = "Kowalski"
+        age = 34
+    }.also {
+        it.incAge()
+        it.addConstToSurname()
+    }
+
+    println(newPerson.age)
+    println(newPerson.surname)
+
 }
